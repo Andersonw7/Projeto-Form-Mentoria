@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap');
+
+:root {
+  /* Colors */
+  --before-background: #535971;
+  --background-color: #efefef;
+  --white: #fff;
+  --input-background: #fafafc;
+  --separator: #e6e6f0;
+  --text-and-span: #4e4958;
+  --background-btn: #ff5374;
+
+  /* Fonts */
+  --heading: 'Staatliches', 'cursive';
+  --paragraph: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 27.25rem;
+  width: 100%;
+  background: var(--before-background);
+  z-index: -1000;
+}
+
+body {
+  background: var(--background-color);
+}
+
+body,
+input,
+select,
+textarea {
+  font-family: var(--paragraph);
+}
+
+.page {
+  max-width: 46.875rem;
+  margin: auto;
+}
+
+header {
+  margin: 8.75rem auto 3.62rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+header h1 {
+  font-family: var(--heading);
+  font-size: 3rem;
+}
+
+header p {
+  font-family: var(--paragraph);
+  font-size: 1.25rem;
+}
+
+form {
+  margin: auto;
+  background: var(--white);
+  border-radius: 1.25rem 1.25rem 0 0;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset legend {
+  color: var(--before-background);
+  font-size: 1.5rem;
+  font-family: var(--heading);
+  line-height: 2.125rem;
+  border-bottom: 1px solid var(--separator);
+  padding-bottom: 1rem;
+  margin-bottom: 2.25rem;
+  width: 100%;
+}
+
+.container-input {
+  display: flex;
+  gap: 1.38rem;
+}
+
+.container-input .input-wrapper {
+  width: 50%;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.input-wrapper label {
+  color: var(--text-and-span);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.input-wrapper label span {
+  color: var(--text-and-span);
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  opacity: 0.8;
+}
+
+.input-wrapper input {
+  border-radius: 0.5rem;
+  border: 1px solid var(--separator);
+  background: var(--input-background);
+  height: 3.5rem;
+  padding-left: 0.5rem;
+}
+
+.input-wrapper input:invalid {
+  border: 1px solid var(--background-btn);
+}
+
+fieldset h3 {
+  color: var(--before-background);
+  font-size: 1.25rem;
+  font-family: var(--heading);
+  line-height: 2.125rem;
+  margin-bottom: -0.5rem;
+}
+
+.col-3 {
+  display: flex;
+  gap: 0.63rem;
+}
+
+.col-3 > div:nth-child(1) {
+  width: 100%;
+  margin-right: 2rem;
+}
+
+.col-3 > div:not(:nth-child(1)) {
+  width: 50%;
+}
+
+footer {
+  background: var(--before-background);
+  border-radius: 0px 0px 1.25rem 1.25rem;
+  height: 10rem;
+  margin-bottom: 22.87rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer button {
+  width: 38rem;
+  height: 3.47825rem;
+  padding: 0.9375rem 2.5rem;
+  border: none;
+  border-radius: 1.25rem;
+  background: var(--background-btn);
+  color: var(--white);
+  font-size: 1.25rem;
+  font-family: var(--heading);
+  line-height: 1.625rem;
+  cursor: pointer;
+}
+
+footer button:hover {
+  filter: brightness(80%);
+}
